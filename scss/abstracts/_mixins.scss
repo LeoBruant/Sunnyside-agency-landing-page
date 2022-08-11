@@ -1,0 +1,11 @@
+$breakpoints: (
+    'tablet': em(576),
+    'laptop': em(992),
+    'desktop': em(1440)
+);
+
+@mixin breakpoint ($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
